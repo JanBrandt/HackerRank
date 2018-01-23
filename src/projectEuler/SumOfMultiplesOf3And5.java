@@ -5,7 +5,7 @@ package projectEuler;
 
 /**
  * @author Jan Brandt
- * @version 0.02 23/01/2018
+ * @version 0.03 23/01/2018
  *
  */
 public class SumOfMultiplesOf3And5 {
@@ -15,7 +15,7 @@ public class SumOfMultiplesOf3And5 {
   }
   
   private int sumOneToN(int N) {
-    return 0;
+    return (N*(N+1))/2;
   }
 
 }
