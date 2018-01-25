@@ -1,10 +1,6 @@
 package implementations;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 import java.awt.Point;
 
 public class QueensAttacksII {
