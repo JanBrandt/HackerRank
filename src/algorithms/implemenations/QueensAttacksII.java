@@ -1,4 +1,4 @@
-package implementations;
+package algorithms.implemenations;
 
 import java.util.*;
 import java.awt.Point;

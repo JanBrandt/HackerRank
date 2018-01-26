@@ -1,10 +1,10 @@
-package implementations.tests;
+package algorithms.implemenations.tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import implementations.NonDivisibleSubset;
+import algorithms.implemenations.NonDivisibleSubset;
 
 public class NonDivisibleSubsetTest {
 

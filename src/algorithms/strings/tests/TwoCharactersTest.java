@@ -1,8 +1,9 @@
-package implementations.tests;
+package algorithms.strings.tests;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import implementations.TwoCharacters;
+
+import algorithms.strings.TwoCharacters;
 
 /**
  * @author Jan Brandt

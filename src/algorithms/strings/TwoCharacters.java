@@ -1,4 +1,4 @@
-package implementations;
+package algorithms.strings;
 
 /**
  * @author Jan Brandt

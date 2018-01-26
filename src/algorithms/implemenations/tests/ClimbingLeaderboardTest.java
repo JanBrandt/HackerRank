@@ -1,8 +1,9 @@
-package implementations.tests;
+package algorithms.implemenations.tests;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import implementations.ClimbingLeaderboard;
+
+import algorithms.implemenations.ClimbingLeaderboard;
 
 public class ClimbingLeaderboardTest {
 

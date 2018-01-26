@@ -1,22 +1,11 @@
-package implementations.tests;
+package algorithms.dynamicProgramming.tests;
 
-import static org.junit.Assert.*;
-
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-import implementations.Abbreviation;
+import algorithms.dynamicProgramming.Abbreviation;
 
 public class AbbreviationTest {
-
-  @BeforeClass
-  public static void setUpBeforeClass() throws Exception {
-  }
-
-  @AfterClass
-  public static void tearDownAfterClass() throws Exception {
-  }
 
   @Test
   public void testAbbreviationSample() {
