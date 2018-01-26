@@ -21,4 +21,25 @@ public class TwoCharactersTest {
     assertEquals("Sample 1", 5, result);
   }
 
+  /**
+   * TestCases with very small Strings.
+   */
+  @Test
+  public void testTwoCharactersEdgeCase() {
+    String s = "";
+    int result = TwoCharacters.twoCharacters(s);
+    assertEquals("Edge case 1", 0, result);
+    s = "a";
+    result = TwoCharacters.twoCharacters(s);
+    assertEquals("Edge case 2", 0, result);
+
+    s = "aa";
+    result = TwoCharacters.twoCharacters(s);
+    assertEquals("Edge case 3", 0, result);
+
+    s = "ab";
+    result = TwoCharacters.twoCharacters(s);
+    assertEquals("Edge case 4", 2, result);
+  }
+
 }
