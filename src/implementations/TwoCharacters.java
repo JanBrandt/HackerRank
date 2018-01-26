@@ -6,7 +6,13 @@ package implementations;
  *
  */
 public final class TwoCharacters {
+  /**
+   * Constant for shifting 'a' to 0, 'b' to 1 and so forth.
+   */
   static final int SHIFT = 97;
+  /**
+   * Constant with number of letters in alphabet.
+   */
   static final int NUMLETTERS = 26;
 
   /**
