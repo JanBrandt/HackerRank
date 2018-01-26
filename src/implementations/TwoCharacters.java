@@ -1,5 +1,6 @@
 package implementations;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 /**
@@ -34,12 +35,20 @@ public final class TwoCharacters {
       i++;
     }
     Character[] chars = getCharacters(workS);
-    if (isValidTwoCharacterString(workS)) {
-      if (workS.length() > result) {
-        result = workS.length();
+    //System.out.println(Arrays.toString(chars));
+    for (int j = 0; j < chars.length - 1; j++) {
+      for (int j2 = j + 1; j2 < chars.length; j2++) {
+        String toRemove = "[^" + chars[j] + chars[j2] + "]";
+        //System.out.println(toRemove);
+        String aktString = workS.replaceAll(toRemove, "");
+        //System.out.println(aktString);
+        if (isValidTwoCharacterString(aktString)) {
+          if (aktString.length() > result) {
+            result = aktString.length();
+          }
+        }
       }
     }
-    System.out.println(workS);
     return result;
   }
 
@@ -48,7 +57,14 @@ public final class TwoCharacters {
    * @return Returns true if s is valid, otherwise false
    */
   private static boolean isValidTwoCharacterString(final String s) {
-    return false;
+    boolean result = true;
+    for (int i = 1; i < s.length(); i++) {
+      if (s.charAt(i - 1) == s.charAt(i)) {
+        result = false;
+        break;
+      }
+    }
+    return result;
   }
 
   /**
