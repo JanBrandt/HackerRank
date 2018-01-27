@@ -6,17 +6,23 @@ package algorithms.strings;
 
 /**
  * @author Jan Brandt
- * @version 0.1 27/01/2018
+ * @version 0.9 27/01/2018
  *
  */
 public final class CaesarChiffre {
-  final static int ALPHABET_LENGTH = 26;
+  /** Constant for the length of the used alphabet. */
+  static final int ALPHABET_LENGTH = 26;
 
   /**
    * Private constructor to prevent instancing.
    */
   private CaesarChiffre() { }
 
+  /**
+   * @param s The string to be ciphered.
+   * @param k The number of chars that should be shifted.
+   * @return Returns the ciphered string.
+   */
   public static String caesarCipher(final String s, final int k) {
     String result = "";
     char[] chars = s.toCharArray();
