@@ -6,12 +6,20 @@ package algorithms.dynamicProgramming;
 
 /**
  * @author Jan Brandt
- * @version 1.11 26/01/18
+ * @version 0.9 27/01/18
  *
  */
-public class Abbreviation {
+public final class Abbreviation {
 
-  public boolean abbreviation(final String a, final String b) {
+  /** Private constructor prevents class from beeing instanced. */
+  private Abbreviation() { }
+
+  /**
+   * @param a Input string 1, that should be abbreviated to b certain rules.
+   * @param b Input string 2, target string.
+   * @return Returns true if abbreviation is possible, false if not.
+   */
+  public static boolean abbreviation(final String a, final String b) {
     if (b.length() > a.length()) {
       return false;
     }

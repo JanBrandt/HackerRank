@@ -12,9 +12,7 @@ import algorithms.strings.TwoCharacters;
 public class TwoCharactersTest {
 
 
-  /**
-   * Sample from HackerRank for minimal test.
-   */
+  /** Sample from HackerRank for minimal test. */
   @Test
   public void testTwoCharactersSample() {
     String s = "beabeefeab";
@@ -22,9 +20,7 @@ public class TwoCharactersTest {
     assertEquals("Sample 1", 5, result);
   }
 
-  /**
-   * TestCases with very small Strings.
-   */
+  /** TestCases with very small Strings.  */
   @Test
   public void testTwoCharactersEdgeCase() {
     String s = "";

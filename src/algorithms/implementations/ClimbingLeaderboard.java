@@ -1,13 +1,21 @@
-package algorithms.implemenations;
+package algorithms.implementations;
 
 /**
  * @author Jan Brandt
- * @version 0.92 26/01/2018
- *
+ * @version 1.0 27/01/2018
  */
-public class ClimbingLeaderboard {
+public final class ClimbingLeaderboard {
 
-  public int[] climbingLeaderboard(final int[] scores, final int[] alice) {
+  /** Private constructor prevents class from beeing instanced. */
+  private ClimbingLeaderboard() { }
+
+  /**
+   * @param scores The leaderboard
+   * @param alice The scores alice did
+   * @return The placings alice archieved with her scores
+   */
+  public static int[] climbingLeaderboard(final int[] scores,
+                                          final int[] alice) {
     int[] result = new int[alice.length];
 
     int[] shrinkedScores = shrinkScores(scores);
@@ -31,7 +39,13 @@ public class ClimbingLeaderboard {
     return result;
   }
 
-  private int binSearch(final int[] scores, final int alice,
+  /**
+   * @param scores The highscoreboard
+   * @param alice Alice score in the actual round
+   * @param lowerBound Alice placing in last round
+   * @return The place in highscore Alice archieve with the new score
+   */
+  private static int binSearch(final int[] scores, final int alice,
                         final int lowerBound) {
     int upper = 0;
     int lower = lowerBound;
@@ -52,7 +66,11 @@ public class ClimbingLeaderboard {
     return upper;
   }
 
-  private int[] shrinkScores(final int[] scores) {
+  /**
+   * @param scores The highscore-table with dublicates
+   * @return The highscore-table without dublicates
+   */
+  private static int[] shrinkScores(final int[] scores) {
     int diffScores = 1;
     int lastScore = scores[0];
     for (int i = 1; i < scores.length; i++) {

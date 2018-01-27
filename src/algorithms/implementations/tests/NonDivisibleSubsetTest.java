@@ -1,17 +1,16 @@
-package algorithms.implemenations.tests;
+package algorithms.implementations.tests;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-
-import algorithms.implemenations.NonDivisibleSubset;
+import algorithms.implementations.NonDivisibleSubset;
 
 /**
  * @author Jan Brandt
- * @version 0.1 26/01/2018
+ * @version 0.9 27/01/2018
  */
 public class NonDivisibleSubsetTest {
 
+  /** Test-sample from HackerRank. */
   @Test
   public void testNonDivisibleSubsetSample() {
     int[] array = {1, 7, 2, 4};
@@ -20,6 +19,7 @@ public class NonDivisibleSubsetTest {
     assertEquals("Sample 1", 3, result);
   }
 
+  /** Simple testcases. */
   @Test
   public void testNonDivisibleSubsetSimple() {
     int[] array = {3};

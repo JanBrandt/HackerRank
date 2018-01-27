@@ -7,15 +7,12 @@ package algorithms.strings;
 /**
  * @author Jan Brandt
  * @version 0.9 27/01/2018
- *
  */
 public final class CaesarChiffre {
   /** Constant for the length of the used alphabet. */
   static final int ALPHABET_LENGTH = 26;
 
-  /**
-   * Private constructor to prevent instancing.
-   */
+  /** Private constructor to prevent instancing. */
   private CaesarChiffre() { }
 
   /**

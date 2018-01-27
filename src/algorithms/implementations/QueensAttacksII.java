@@ -1,20 +1,29 @@
-package algorithms.implemenations;
+package algorithms.implementations;
 
 import java.awt.Point;
 import java.util.HashSet;
 
 /**
  * @author Jan Brandt
- * @version 0.11 26/01/2018
- *
+ * @version 0.9 27/01/2018
  */
-public class QueensAttacksII {
+public final class QueensAttacksII {
 
-    static int queensAttack(final int n, final int k, final int r_q,
-                            final int c_q, HashSet<Point> obstacles) {
+ /** Private constructor prevents class from beeing instanced. */
+private QueensAttacksII() { }
+    /**
+     * @param n Size of the board
+     * @param rowQueen Row-position of the queen
+     * @param columnQueen Column-position of the queen
+     * @param obstacles Set of obstacles that hinder the queen
+     * @return Number of fields the queen can be moved to.
+     */
+    static int queensAttack(final int n, final int rowQueen,
+                            final int columnQueen,
+                            final HashSet<Point> obstacles) {
       int result = 0;
-      int posX = r_q;
-      int posY = c_q;
+      int posX = rowQueen;
+      int posY = columnQueen;
       int[][] move = {{1, 0}, {1, 1}, {0, 1}, {-1, 1}, {-1, 0}, {-1, -1},
                       {0, -1}, {1, -1}};
       int moveX;
@@ -22,8 +31,8 @@ public class QueensAttacksII {
       for (int i = 0; i < 8; i++) {
           moveX = move[i][0];
           moveY = move[i][1];
-          posX = r_q;
-          posY = c_q;
+          posX = rowQueen;
+          posY = columnQueen;
           boolean border = false;
           while (!border) {
               posX += moveX;

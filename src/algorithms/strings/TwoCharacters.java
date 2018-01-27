@@ -2,24 +2,17 @@ package algorithms.strings;
 
 /**
  * @author Jan Brandt
- * @version 0.01 25/01/2018
+ * @version 0.9 27/01/2018
  *
  */
 public final class TwoCharacters {
-  /**
-   * Constant for shifting 'a' to 0, 'b' to 1 and so forth.
-   */
+  /** Constant for shifting 'a' to 0, 'b' to 1 and so forth. */
   static final int SHIFT = 97;
-  /**
-   * Constant with number of letters in alphabet.
-   */
+  /** Constant with number of letters in alphabet. */
   static final int NUMLETTERS = 26;
 
-  /**
-   * No constructor for this class.
-   */
-  private TwoCharacters() {
-  }
+  /** Private constructor prevents class from being instanced. */
+  private TwoCharacters() { }
 
   /**
    * @param s Given String for the problem, should be reduced to an alternating
