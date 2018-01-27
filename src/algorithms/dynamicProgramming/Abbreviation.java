@@ -6,19 +6,17 @@ package algorithms.dynamicProgramming;
 
 /**
  * @author Jan Brandt
- * @version 1.1 11/30/17
+ * @version 1.11 26/01/18
  *
  */
 public class Abbreviation {
 
   public boolean abbreviation(final String a, final String b) {
-    if (b.length() > a.length()) return false;
+    if (b.length() > a.length()) {
+      return false;
+    }
     if (b.length() == 0) {
-      if (a.toLowerCase().equals(a)) {
-        return true;
-      } else {
-        return false;
-      }
+      return a.toLowerCase().equals(a);
     }
     if (Character.toUpperCase(a.charAt(0)) == a.charAt(0)) {
       if (a.charAt(0) == b.charAt(0)) {
